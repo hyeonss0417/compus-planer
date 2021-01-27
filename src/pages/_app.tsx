@@ -44,6 +44,10 @@ export default function App({ Component, pageProps }: AppProps): JSX.Element {
         <link rel="apple-touch-icon" sizes="512x512" href="/logo512.png" />
         <link rel="apple-touch-icon" sizes="256x256" href="/logo256.png" />
         <link rel="manifest" href="/manifest.json" />
+        <link
+          rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
       </Head>
       <Provider store={store}>
         <ThemeProvider>
