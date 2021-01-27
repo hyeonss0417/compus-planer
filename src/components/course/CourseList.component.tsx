@@ -17,33 +17,8 @@ const {
   sidebarPagesActive,
 } = styles;
 
-export default function Sidebar(): JSX.Element {
+export default function CourseList(): JSX.Element {
   //const notifications = useSelector((state: RootState) => state.courses.);
 
-  return (
-    <aside className={sidebar}>
-      <div className={sidebarProfile}>
-        <h2 className={sidebarProfileName}>
-          <Placeholder content={name} length="short" />
-        </h2>
-        <p className={sidebarProfileBio}>
-          <Placeholder content={bio} length="medium" />
-        </p>
-      </div>
-      <div className={sidebarPages}>
-        <h3>Pages</h3>
-        <Pages className={sidebarPagesList} activeClass={sidebarPagesActive}>
-          <li>
-            <Placeholder length="short" />
-          </li>
-          <li>
-            <Placeholder length="short" />
-          </li>
-          <li>
-            <Placeholder length="short" />
-          </li>
-        </Pages>
-      </div>
-    </aside>
-  );
+  return <></>;
 }
