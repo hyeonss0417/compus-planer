@@ -12,11 +12,10 @@
 
   &List {
     margin: 0px calc(0px - var(--course-gap-left));
-    padding-left: var(--course-gap-left);
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 250px;
+    height: 300px;
     overflow: scroll;
     scroll-snap-type: x mandatory;
   }
@@ -31,7 +30,8 @@
     flex-direction: row;
     justify-content: space-between;
     width: 390px;
-    margin: 0px 20px 20px 0px;
+    margin: 0px 0px 20px 0px;
+    padding: 10px 16px;
     scroll-snap-align: start;
     scroll-margin: var(--course-gap-left);
 

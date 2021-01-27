@@ -14,7 +14,7 @@ const {
   sidebarProfileBio,
   sidebarPages,
   sidebarPagesList,
-  sidebarPagesActive,
+  sidebarPagesActive
 } = styles;
 
 export default function CourseList(): JSX.Element {
