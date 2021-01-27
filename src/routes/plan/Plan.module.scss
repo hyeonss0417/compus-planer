@@ -7,6 +7,9 @@
 .course {
   --profile-picture-size: 200px;
   --course-gap-left: 16px;
+  * {
+    transition: all 0.5s ease;
+  }
 
   h2 {
     font-size: 35px;
@@ -36,7 +39,6 @@
     margin: 0px;
     padding: 10px 0px 10px 16px;
     scroll-snap-align: start;
-    transition: all 0.5s ease;
     &:hover {
       background: gray;
     }
@@ -49,7 +51,9 @@
       height: 50px;
       border: 2px solid;
       border-radius: 5px;
-
+      &:hover {
+        background: lightgrey;
+      }
       span {
         font-size: 26px;
         font-weight: 500;
@@ -75,9 +79,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: auto 0px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+
     cursor: pointer;
+
+    &:hover {
+      background: lightgrey;
+    }
+
     span {
-      padding: 10px 15px;
       font-size: 20px;
     }
   }
