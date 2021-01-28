@@ -19,6 +19,7 @@
   --icon-size: 30px;
 
   box-sizing: border-box;
+
   @include media.before-desktop {
     user-select: none;
     -webkit-touch-callout: none;

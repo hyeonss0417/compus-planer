@@ -1,0 +1,16 @@
+@use 'styles/variables/media';
+@use 'styles/variables/placeholder' as *;
+
+.course {
+  --course-gap-left: 16px;
+
+  &List {
+    margin: 0px calc(0px - var(--course-gap-left));
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 250px;
+    overflow: scroll;
+    scroll-snap-type: x mandatory;
+  }
+}

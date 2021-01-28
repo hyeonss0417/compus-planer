@@ -1,17 +1,72 @@
 import React from "react";
 import Head from "next/head";
 import styles from "./Plan.module.scss";
+import Course from "../../components/courseList/course";
+import CourseList from "../../components/courseList";
+import { ICourseList } from "../../components/courseList/CourseList.component";
+import { ICourse } from "../../components/courseList/course/Course.component";
 
-const {
-  course,
-  courseList,
-  courseItem,
-  courseItemGrade,
-  courseItemContent,
-  courseOption,
-  courseContainer,
-  main,
-} = styles;
+const { main, course } = styles;
+
+interface ICourseData {
+  name: string;
+  courses: ICourse[];
+}
+
+const courseListData: ICourseData[] = [
+  {
+    name: "2020-1",
+    courses: [
+      { grade: "A+", title: "World Prehistory 📌", meta: "ICS 18A" },
+      { grade: "A", title: "African American History 📌", meta: "ICS 18A" },
+      { grade: "B", title: "World Prehistory", meta: "ICS 18A" },
+      { grade: "B+", title: "African American History 📌", meta: "ICS 18A" },
+      { grade: "A", title: "African American History", meta: "ICS 18A" },
+      { grade: "B", title: "World Prehistory 📌", meta: "ICS 18A" },
+      { grade: "B", title: "World Prehistory", meta: "ICS 18A" },
+      { grade: "B+", title: "African American History 📌", meta: "ICS 18A" },
+    ],
+  },
+  {
+    name: "2020-2",
+    courses: [
+      { grade: "A+", title: "World Prehistory 📌", meta: "ICS 18A" },
+      { grade: "A", title: "African American History 📌", meta: "ICS 18A" },
+      { grade: "B", title: "World Prehistory", meta: "ICS 18A" },
+      { grade: "B+", title: "African American History 📌", meta: "ICS 18A" },
+      { grade: "A", title: "African American History", meta: "ICS 18A" },
+      { grade: "B", title: "World Prehistory 📌", meta: "ICS 18A" },
+      { grade: "B", title: "World Prehistory", meta: "ICS 18A" },
+      { grade: "B+", title: "African American History 📌", meta: "ICS 18A" },
+    ],
+  },
+  {
+    name: "2021-1",
+    courses: [
+      { grade: "A+", title: "World Prehistory 📌", meta: "ICS 18A" },
+      { grade: "A", title: "African American History 📌", meta: "ICS 18A" },
+      { grade: "B", title: "World Prehistory", meta: "ICS 18A" },
+      { grade: "B+", title: "African American History 📌", meta: "ICS 18A" },
+      { grade: "A", title: "African American History", meta: "ICS 18A" },
+      { grade: "B", title: "World Prehistory 📌", meta: "ICS 18A" },
+      { grade: "B", title: "World Prehistory", meta: "ICS 18A" },
+      { grade: "B+", title: "African American History 📌", meta: "ICS 18A" },
+    ],
+  },
+  {
+    name: "2021-2",
+    courses: [
+      { grade: "A+", title: "World Prehistory 📌", meta: "ICS 18A" },
+      { grade: "A", title: "African American History 📌", meta: "ICS 18A" },
+      { grade: "B", title: "World Prehistory", meta: "ICS 18A" },
+      { grade: "B+", title: "African American History 📌", meta: "ICS 18A" },
+      { grade: "A", title: "African American History", meta: "ICS 18A" },
+      { grade: "B", title: "World Prehistory 📌", meta: "ICS 18A" },
+      { grade: "B", title: "World Prehistory", meta: "ICS 18A" },
+      { grade: "B+", title: "African American History 📌", meta: "ICS 18A" },
+    ],
+  },
+];
 
 export default function Plan(): JSX.Element {
   return (
@@ -21,474 +76,12 @@ export default function Plan(): JSX.Element {
         <meta name="robots" content="noindex" />
       </Head>
       <main className={main}>
-        <div className={course}>
-          <h2>2020-1</h2>
-          <div className={courseList}>
-            <div className={courseItem}>
-              <div className={courseContainer}>
-                <div className={courseItemGrade}>
-                  <span>A+</span>
-                </div>
-                <div className={courseItemContent}>
-                  <h3>World Prehistory 📌</h3>
-                  <p>ICS 18A</p>
-                </div>
-              </div>
-              <div className={courseOption}>
-                <span>
-                  <i className="fa fa-ellipsis-v"></i>{" "}
-                </span>
-              </div>
-            </div>
-            <div className={courseItem}>
-              <div className={courseContainer}>
-                <div className={courseItemGrade}>
-                  <span>A</span>
-                </div>
-                <div className={courseItemContent}>
-                  <h3>African American History 📌</h3>
-                  <p>ICS 18A</p>
-                </div>
-              </div>
-              <div className={courseOption}>
-                <span>
-                  <i className="fa fa-ellipsis-v"></i>{" "}
-                </span>
-              </div>
-            </div>
-            <div className={courseItem}>
-              <div className={courseContainer}>
-                <div className={courseItemGrade}>
-                  <span>B</span>
-                </div>
-                <div className={courseItemContent}>
-                  <h3>African American History</h3>
-                  <p>ICS 18A</p>
-                </div>
-              </div>
-              <div className={courseOption}>
-                <span>
-                  <i className="fa fa-ellipsis-v"></i>{" "}
-                </span>
-              </div>
-            </div>
-            <div className={courseItem}>
-              <div className={courseContainer}>
-                <div className={courseItemGrade}>
-                  <span>A+</span>
-                </div>
-                <div className={courseItemContent}>
-                  <h3>World Prehistory 📌</h3>
-                  <p>ICS 18A</p>
-                </div>
-              </div>
-              <div className={courseOption}>
-                <span>
-                  <i className="fa fa-ellipsis-v"></i>{" "}
-                </span>
-              </div>
-            </div>
-            <div className={courseItem}>
-              <div className={courseContainer}>
-                <div className={courseItemGrade}>
-                  <span>A</span>
-                </div>
-                <div className={courseItemContent}>
-                  <h3>African American History 📌</h3>
-                  <p>ICS 18A</p>
-                </div>
-              </div>
-              <div className={courseOption}>
-                <span>
-                  <i className="fa fa-ellipsis-v"></i>{" "}
-                </span>
-              </div>
-            </div>
-            <div className={courseItem}>
-              <div className={courseContainer}>
-                <div className={courseItemGrade}>
-                  <span>B</span>
-                </div>
-                <div className={courseItemContent}>
-                  <h3>African American History</h3>
-                  <p>ICS 18A</p>
-                </div>
-              </div>
-              <div className={courseOption}>
-                <span>
-                  <i className="fa fa-ellipsis-v"></i>{" "}
-                </span>
-              </div>
-            </div>
-            <div className={courseItem}>
-              <div className={courseContainer}>
-                <div className={courseItemGrade}>
-                  <span>B</span>
-                </div>
-                <div className={courseItemContent}>
-                  <h3>African American History</h3>
-                  <p>ICS 18A</p>
-                </div>
-              </div>
-              <div className={courseOption}>
-                <span>
-                  <i className="fa fa-ellipsis-v"></i>{" "}
-                </span>
-              </div>
-            </div>
+        {courseListData.map((courseList) => (
+          <div className={course}>
+            <h2>{courseList.name}</h2>
+            <CourseList courses={courseList.courses} />
           </div>
-        </div>
-        <div className={course}>
-          <h2>2020-2</h2>
-          <div className={courseList}>
-            <div className={courseItem}>
-              <div className={courseContainer}>
-                <div className={courseItemGrade}>
-                  <span>A+</span>
-                </div>
-                <div className={courseItemContent}>
-                  <h3>World Prehistory 📌</h3>
-                  <p>ICS 18A</p>
-                </div>
-              </div>
-              <div className={courseOption}>
-                <span>
-                  <i className="fa fa-ellipsis-v"></i>{" "}
-                </span>
-              </div>
-            </div>
-            <div className={courseItem}>
-              <div className={courseContainer}>
-                <div className={courseItemGrade}>
-                  <span>A</span>
-                </div>
-                <div className={courseItemContent}>
-                  <h3>African American History 📌</h3>
-                  <p>ICS 18A</p>
-                </div>
-              </div>
-              <div className={courseOption}>
-                <span>
-                  <i className="fa fa-ellipsis-v"></i>{" "}
-                </span>
-              </div>
-            </div>
-            <div className={courseItem}>
-              <div className={courseContainer}>
-                <div className={courseItemGrade}>
-                  <span>B</span>
-                </div>
-                <div className={courseItemContent}>
-                  <h3>African American History</h3>
-                  <p>ICS 18A</p>
-                </div>
-              </div>
-              <div className={courseOption}>
-                <span>
-                  <i className="fa fa-ellipsis-v"></i>{" "}
-                </span>
-              </div>
-            </div>
-            <div className={courseItem}>
-              <div className={courseContainer}>
-                <div className={courseItemGrade}>
-                  <span>A+</span>
-                </div>
-                <div className={courseItemContent}>
-                  <h3>World Prehistory 📌</h3>
-                  <p>ICS 18A</p>
-                </div>
-              </div>
-              <div className={courseOption}>
-                <span>
-                  <i className="fa fa-ellipsis-v"></i>{" "}
-                </span>
-              </div>
-            </div>
-            <div className={courseItem}>
-              <div className={courseContainer}>
-                <div className={courseItemGrade}>
-                  <span>A</span>
-                </div>
-                <div className={courseItemContent}>
-                  <h3>African American History 📌</h3>
-                  <p>ICS 18A</p>
-                </div>
-              </div>
-              <div className={courseOption}>
-                <span>
-                  <i className="fa fa-ellipsis-v"></i>{" "}
-                </span>
-              </div>
-            </div>
-            <div className={courseItem}>
-              <div className={courseContainer}>
-                <div className={courseItemGrade}>
-                  <span>B</span>
-                </div>
-                <div className={courseItemContent}>
-                  <h3>African American History</h3>
-                  <p>ICS 18A</p>
-                </div>
-              </div>
-              <div className={courseOption}>
-                <span>
-                  <i className="fa fa-ellipsis-v"></i>{" "}
-                </span>
-              </div>
-            </div>
-            <div className={courseItem}>
-              <div className={courseContainer}>
-                <div className={courseItemGrade}>
-                  <span>B</span>
-                </div>
-                <div className={courseItemContent}>
-                  <h3>African American History</h3>
-                  <p>ICS 18A</p>
-                </div>
-              </div>
-              <div className={courseOption}>
-                <span>
-                  <i className="fa fa-ellipsis-v"></i>{" "}
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className={course}>
-          <h2>2021-1</h2>
-          <div className={courseList}>
-            <div className={courseItem}>
-              <div className={courseContainer}>
-                <div className={courseItemGrade}>
-                  <span>A+</span>
-                </div>
-                <div className={courseItemContent}>
-                  <h3>World Prehistory 📌</h3>
-                  <p>ICS 18A</p>
-                </div>
-              </div>
-              <div className={courseOption}>
-                <span>
-                  <i className="fa fa-ellipsis-v"></i>{" "}
-                </span>
-              </div>
-            </div>
-            <div className={courseItem}>
-              <div className={courseContainer}>
-                <div className={courseItemGrade}>
-                  <span>A</span>
-                </div>
-                <div className={courseItemContent}>
-                  <h3>African American History 📌</h3>
-                  <p>ICS 18A</p>
-                </div>
-              </div>
-              <div className={courseOption}>
-                <span>
-                  <i className="fa fa-ellipsis-v"></i>{" "}
-                </span>
-              </div>
-            </div>
-            <div className={courseItem}>
-              <div className={courseContainer}>
-                <div className={courseItemGrade}>
-                  <span>B</span>
-                </div>
-                <div className={courseItemContent}>
-                  <h3>African American History</h3>
-                  <p>ICS 18A</p>
-                </div>
-              </div>
-              <div className={courseOption}>
-                <span>
-                  <i className="fa fa-ellipsis-v"></i>{" "}
-                </span>
-              </div>
-            </div>
-            <div className={courseItem}>
-              <div className={courseContainer}>
-                <div className={courseItemGrade}>
-                  <span>A+</span>
-                </div>
-                <div className={courseItemContent}>
-                  <h3>World Prehistory 📌</h3>
-                  <p>ICS 18A</p>
-                </div>
-              </div>
-              <div className={courseOption}>
-                <span>
-                  <i className="fa fa-ellipsis-v"></i>{" "}
-                </span>
-              </div>
-            </div>
-            <div className={courseItem}>
-              <div className={courseContainer}>
-                <div className={courseItemGrade}>
-                  <span>A</span>
-                </div>
-                <div className={courseItemContent}>
-                  <h3>African American History 📌</h3>
-                  <p>ICS 18A</p>
-                </div>
-              </div>
-              <div className={courseOption}>
-                <span>
-                  <i className="fa fa-ellipsis-v"></i>{" "}
-                </span>
-              </div>
-            </div>
-            <div className={courseItem}>
-              <div className={courseContainer}>
-                <div className={courseItemGrade}>
-                  <span>B</span>
-                </div>
-                <div className={courseItemContent}>
-                  <h3>African American History</h3>
-                  <p>ICS 18A</p>
-                </div>
-              </div>
-              <div className={courseOption}>
-                <span>
-                  <i className="fa fa-ellipsis-v"></i>{" "}
-                </span>
-              </div>
-            </div>
-            <div className={courseItem}>
-              <div className={courseContainer}>
-                <div className={courseItemGrade}>
-                  <span>B</span>
-                </div>
-                <div className={courseItemContent}>
-                  <h3>African American History</h3>
-                  <p>ICS 18A</p>
-                </div>
-              </div>
-              <div className={courseOption}>
-                <span>
-                  <i className="fa fa-ellipsis-v"></i>{" "}
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className={course}>
-          <h2>2021-2</h2>
-          <div className={courseList}>
-            <div className={courseItem}>
-              <div className={courseContainer}>
-                <div className={courseItemGrade}>
-                  <span>A+</span>
-                </div>
-                <div className={courseItemContent}>
-                  <h3>World Prehistory 📌</h3>
-                  <p>ICS 18A</p>
-                </div>
-              </div>
-              <div className={courseOption}>
-                <span>
-                  <i className="fa fa-ellipsis-v"></i>{" "}
-                </span>
-              </div>
-            </div>
-            <div className={courseItem}>
-              <div className={courseContainer}>
-                <div className={courseItemGrade}>
-                  <span>A</span>
-                </div>
-                <div className={courseItemContent}>
-                  <h3>African American History 📌</h3>
-                  <p>ICS 18A</p>
-                </div>
-              </div>
-              <div className={courseOption}>
-                <span>
-                  <i className="fa fa-ellipsis-v"></i>{" "}
-                </span>
-              </div>
-            </div>
-            <div className={courseItem}>
-              <div className={courseContainer}>
-                <div className={courseItemGrade}>
-                  <span>B</span>
-                </div>
-                <div className={courseItemContent}>
-                  <h3>African American History</h3>
-                  <p>ICS 18A</p>
-                </div>
-              </div>
-              <div className={courseOption}>
-                <span>
-                  <i className="fa fa-ellipsis-v"></i>{" "}
-                </span>
-              </div>
-            </div>
-            <div className={courseItem}>
-              <div className={courseContainer}>
-                <div className={courseItemGrade}>
-                  <span>A+</span>
-                </div>
-                <div className={courseItemContent}>
-                  <h3>World Prehistory 📌</h3>
-                  <p>ICS 18A</p>
-                </div>
-              </div>
-              <div className={courseOption}>
-                <span>
-                  <i className="fa fa-ellipsis-v"></i>{" "}
-                </span>
-              </div>
-            </div>
-            <div className={courseItem}>
-              <div className={courseContainer}>
-                <div className={courseItemGrade}>
-                  <span>A</span>
-                </div>
-                <div className={courseItemContent}>
-                  <h3>African American History 📌</h3>
-                  <p>ICS 18A</p>
-                </div>
-              </div>
-              <div className={courseOption}>
-                <span>
-                  <i className="fa fa-ellipsis-v"></i>{" "}
-                </span>
-              </div>
-            </div>
-            <div className={courseItem}>
-              <div className={courseContainer}>
-                <div className={courseItemGrade}>
-                  <span>B</span>
-                </div>
-                <div className={courseItemContent}>
-                  <h3>African American History</h3>
-                  <p>ICS 18A</p>
-                </div>
-              </div>
-              <div className={courseOption}>
-                <span>
-                  <i className="fa fa-ellipsis-v"></i>{" "}
-                </span>
-              </div>
-            </div>
-            <div className={courseItem}>
-              <div className={courseContainer}>
-                <div className={courseItemGrade}>
-                  <span>B</span>
-                </div>
-                <div className={courseItemContent}>
-                  <h3>African American History</h3>
-                  <p>ICS 18A</p>
-                </div>
-              </div>
-              <div className={courseOption}>
-                <span>
-                  <i className="fa fa-ellipsis-v"></i>{" "}
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
+        ))}
       </main>
     </>
   );

@@ -6,10 +6,16 @@ import styles from "./Items.module.scss";
 
 const { items, active } = styles;
 
-const links = [
+interface Ilinks {
+  name: string;
+  url: string;
+  alias: string[];
+}
+
+const links: Ilinks[] = [
   { name: "Home", url: "/", alias: [] },
   { name: "Plan", url: "/plan", alias: [] },
-  { name: "Pages", url: "/pages", alias: ["/[page]"] },
+  //{ name: "Pages", url: "/pages", alias: ["/[page]"] },
   { name: "Profile", url: "/profile", alias: [] },
 ];
 
