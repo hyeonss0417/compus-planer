@@ -1,4 +1,4 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { injectClassNames } from "utils/css";
@@ -9,14 +9,34 @@ const { items, active } = styles;
 interface Ilinks {
   name: string;
   url: string;
+  icon: string;
+  iconStyle: CSSProperties;
   alias: string[];
 }
 
 const links: Ilinks[] = [
-  { name: "Home", url: "/", alias: [] },
-  { name: "Plan", url: "/plan", alias: [] },
+  {
+    name: "Home",
+    url: "/",
+    icon: "fa fa-home",
+    iconStyle: { fontSize: "26px" },
+    alias: [],
+  },
+  {
+    name: "Plan",
+    url: "/plan",
+    icon: "fa fa-graduation-cap",
+    iconStyle: { fontSize: "22px" },
+    alias: [],
+  },
   //{ name: "Pages", url: "/pages", alias: ["/[page]"] },
-  { name: "Profile", url: "/profile", alias: [] },
+  {
+    name: "Profile",
+    url: "/profile",
+    icon: "fa fa-cog fa-2x",
+    iconStyle: { fontSize: "26px" },
+    alias: [],
+  },
 ];
 
 export default function Items(): JSX.Element {
@@ -24,7 +44,7 @@ export default function Items(): JSX.Element {
 
   return (
     <ul className={items}>
-      {links.map(({ name, url, alias }) => (
+      {links.map(({ name, url, icon, iconStyle, alias }) => (
         <li
           key={name}
           className={injectClassNames([
@@ -32,7 +52,12 @@ export default function Items(): JSX.Element {
             pathname === url || alias.includes(pathname),
           ])}
         >
-          <Link href={url}>{name}</Link>
+          <Link href={url}>
+            <div>
+              <i className={icon} style={iconStyle}></i>
+              <span>{name}</span>
+            </div>
+          </Link>
         </li>
       ))}
     </ul>

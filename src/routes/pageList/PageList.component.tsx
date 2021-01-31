@@ -10,7 +10,7 @@ export default function PageList(): JSX.Element {
   return (
     <>
       <Head>
-        <title>New life - Plan</title>
+        <title>ULife - Plan</title>
       </Head>
       <main className={pageList}>
         <h1>Plan</h1>

@@ -6,7 +6,7 @@ const { footer } = styles;
 export default function Footer(): JSX.Element {
   return (
     <footer className={footer}>
-      <p>© 2021 New Life </p>
+      <p>© 2021 ULife </p>
       {/* <p>
         View source code on{" "}
         <a

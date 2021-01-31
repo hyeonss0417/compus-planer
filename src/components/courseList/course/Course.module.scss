@@ -49,14 +49,16 @@
     &Content {
       margin-left: 10px;
       h3 {
+        color: var(--primary-text-color);
         margin: 0px 0px 5px;
         font-size: 16px;
         font-weight: 400;
       }
       p {
+        color: var(--secondary-text-color);
         margin: 0px;
         font-size: 14px;
-        font-weight: 200;
+        font-weight: 400;
       }
     }
   }
