@@ -47,7 +47,7 @@ export default function Profile(): JSX.Element {
         </div>
         <div className={about}>
           <h2>About</h2>
-          <p>ㅎㅇㅎㅇㅎ</p>
+          <p>Preparing...</p>
         </div>
       </main>
     </>
