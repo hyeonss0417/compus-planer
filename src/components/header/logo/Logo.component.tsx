@@ -19,8 +19,7 @@ export default function Logo(): JSX.Element {
 
   return (
     <div className={logo}>
-      {/* <Link href="/">ULife</Link> */}
-      <Link href="#">{titleMap[pathname]}</Link>
+      <Link href="#">{titleMap[pathname] || "ULIfe"}</Link>
     </div>
   );
 }

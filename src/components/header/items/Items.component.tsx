@@ -34,7 +34,7 @@ const links: Ilinks[] = [
     name: "Profile",
     url: "/profile",
     icon: "fa fa-cog fa-2x",
-    iconStyle: { fontSize: "26px" },
+    iconStyle: { fontSize: "24px" },
     alias: [],
   },
 ];

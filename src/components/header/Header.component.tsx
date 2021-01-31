@@ -4,7 +4,6 @@ import Items from "components/header/items";
 import Logo from "components/header/logo";
 import ThemeToggler from "components/header/themeToggler";
 import styles from "./Header.module.scss";
-import { useRouter } from "next/router";
 
 const OFFLINE = "offline";
 
@@ -24,9 +23,7 @@ const handleNetworkChange = (): void => {
   classList.remove(OFFLINE);
 };
 
-export default memo(function Header({}): JSX.Element {
-  const [title, setTitle] = useState("ULife");
-  const router = useRouter();
+export default memo(function Header(): JSX.Element {
   useEffect(() => {
     if (typeof window !== undefined) {
       handleNetworkChange();

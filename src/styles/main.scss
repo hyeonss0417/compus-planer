@@ -32,10 +32,11 @@ html {
   --highlight-color: #007bff;
 
   --primary-block-color: #fff;
-  --secondary-block-color: #fff;
+  --secondary-block-color: #8a8a8e;
 
   --primary-text-color: #000;
   --secondary-text-color: #3a3a3c;
+  --tertiary-text-color: #8a8a8e;
 
   --button-background: #e5e5ea;
   --button-hover: #e1e1e6;
@@ -43,13 +44,16 @@ html {
   &.dark-mode {
     --background-color: #1c1c1e;
 
-    --highlight-color: #0a84ff;
+    --highlight-color: #0f92ff;
 
     --primary-block-color: #2c2c2e;
-    --secondary-block-color: #8e8e93;
+    --secondary-block-color: #4f4f50;
+    --tertinary-block-color: #8e8e93;
 
     --primary-text-color: #fff;
-    --secondary-text-color: #f2f2f7;
+    --secondary-text-color: #8d8d93;
+    --tertiary-text-color: #47474a;
+    --quaternary-text-color: #2a2a2c;
 
     --button-background: #3a3a3a;
     --button-hover: #3b3b3d;
