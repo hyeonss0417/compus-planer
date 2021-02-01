@@ -22,9 +22,19 @@
 }
 
 .progress {
+  text {
+    fill: var(--secondary-text-color) !important;
+  }
+
   h2 {
     font-size: 30px;
     font-weight: 500;
+    --start: var(--primary-text-color);
+    --end: var(--primary-text-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(90deg, var(--start), var(--end));
   }
 
   > div {
@@ -39,6 +49,21 @@
   display: flex;
   flex-direction: column;
 
+  text {
+    fill: var(--secondary-text-color) !important;
+  }
+
+  h2 {
+    font-size: 30px;
+    font-weight: 500;
+    --start: var(--primary-text-color);
+    --end: var(--primary-text-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(90deg, var(--start), var(--end));
+  }
+
   @include media.after-mobile {
     display: flex;
     flex-direction: row;
@@ -48,10 +73,6 @@
   &Item {
     @include media.after-mobile {
       max-width: 50vw;
-    }
-    h2 {
-      font-size: 30px;
-      font-weight: 500;
     }
 
     > div {

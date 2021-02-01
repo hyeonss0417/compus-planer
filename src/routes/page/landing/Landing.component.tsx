@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "components/image";
 import styles from "./Landing.module.scss";
+import Link from "next/link";
 
 const {
   wrapper,
@@ -15,24 +16,15 @@ export default function Landing(): JSX.Element {
     <div className={wrapper}>
       <div className={landing}>
         <div className={landingText}>
-          <h1>Make your transfer easy</h1>
+          <h1>Make your transfer admission easy</h1>
           <p>
-            Designed to help you kick-start your next project.
+            ULife is the best partner to help you transfer to university.
             <br />
-            This boilerplate is production ready and comes with a service
-            worker, redux store, dark-mode, router, and plenty other useful
-            features.
+            Get the information you need to find the best path to your degree.
           </p>
         </div>
         <div className={landingNavigationWrapper}>
-          <a
-            href="https://github.com/tomburgs/pwa-boilerplate"
-            target="_blank"
-            rel="noreferrer"
-          >
-            View source code on GitHub
-          </a>
-          <p>Available under MIT license</p>
+          <Link href="/plan">Plan your transfer</Link>
         </div>
         <Image
           className={landingImage}
