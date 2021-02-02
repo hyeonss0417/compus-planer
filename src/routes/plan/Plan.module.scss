@@ -21,21 +21,24 @@
   }
 }
 
+.chart {
+}
+
 .progress {
   text {
     fill: var(--secondary-text-color) !important;
   }
 
-  h2 {
-    font-size: 30px;
-    font-weight: 500;
-    --start: var(--primary-text-color);
-    --end: var(--primary-text-color);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    background-image: linear-gradient(90deg, var(--start), var(--end));
-  }
+  // h2 {
+  //   font-size: 30px;
+  //   font-weight: 500;
+  //   --start: var(--primary-text-color);
+  //   --end: var(--primary-text-color);
+  //   -webkit-background-clip: text;
+  //   -webkit-text-fill-color: transparent;
+  //   background-clip: text;
+  //   background-image: linear-gradient(90deg, var(--start), var(--end));
+  // }
 
   > div {
     height: 250px;
@@ -53,16 +56,16 @@
     fill: var(--secondary-text-color) !important;
   }
 
-  h2 {
-    font-size: 30px;
-    font-weight: 500;
-    --start: var(--primary-text-color);
-    --end: var(--primary-text-color);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    background-image: linear-gradient(90deg, var(--start), var(--end));
-  }
+  // h2 {
+  //   font-size: 30px;
+  //   font-weight: 500;
+  //   --start: var(--primary-text-color);
+  //   --end: var(--primary-text-color);
+  //   -webkit-background-clip: text;
+  //   -webkit-text-fill-color: transparent;
+  //   background-clip: text;
+  //   background-image: linear-gradient(90deg, var(--start), var(--end));
+  // }
 
   @include media.after-mobile {
     display: flex;
