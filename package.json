@@ -24,7 +24,7 @@
     "typescript": "~4.1.3",
     "workbox-core": "^6.0.2",
     "workbox-expiration": "^6.0.2",
-    "workbox-precaching": "^6.0.2",
+    "workbox-precaching": "^6.3.0",
     "workbox-routing": "^6.0.2",
     "workbox-strategies": "^6.0.2",
     "workbox-webpack-plugin": "^6.0.2"
